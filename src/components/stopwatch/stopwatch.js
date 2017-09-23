@@ -1,10 +1,9 @@
 import { connect } from 'preact-redux';
 import { bindActionCreators } from 'redux';
-import { h, Component } from 'preact';
+import React, { h, Component } from 'preact';
 import PropTypes from 'prop-types';
 import { Subscription } from 'rxjs';
 import moment from 'moment';
-import cssModules from 'react-css-modules';
 import style from './stopwatch.css';
 
 import * as timer from '../../actions/stopwatch';
@@ -76,4 +75,4 @@ export default connect(
       }
     }
   }
-)(cssModules(Stopwatch, style));
+)(Stopwatch, style);

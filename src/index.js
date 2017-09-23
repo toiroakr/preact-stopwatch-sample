@@ -1,5 +1,5 @@
-import { h, render } from 'preact';
-import App from './App';
+import React, { h, render } from 'preact';
+import Stopwatch from './components/stopwatch/stopwatch';
 import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 import Store from './store';
@@ -9,7 +9,7 @@ const StoreInstance = Store();
 
 render(
   <Provider store={StoreInstance}>
-    <App />
+    <Stopwatch />
   </Provider>,
   document.getElementById('root')
 );
